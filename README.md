@@ -14,7 +14,6 @@ This repository includes files with plain SQL that can be used to recreate a dat
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -55,13 +54,6 @@ This repository includes files with plain SQL that can be used to recreate a dat
 ### Key Features <a name="key-features"></a>
 
 - **[Database for vet animals]**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-Not able at the moment
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -123,8 +115,6 @@ Not able at the moment
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
-
-> Describe 1 - 3 features you will add to the project.
 
 - **query and update animals table.**
 - **query multiple tables.**
