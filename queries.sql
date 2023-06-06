@@ -60,3 +60,7 @@ SELECT COUNT(*) FROM animals;
 /* How many animals have never tried to escape? */
 
 SELECT COUNT(*) FROM animals WHERE escape_attempts = 0;
+
+/* What is the average weight of animals? */
+
+SELECT AVG(weight) FROM animals;
