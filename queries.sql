@@ -50,3 +50,9 @@ ROLLBACK TO animals_savepoint;
 UPDATE animals SET weight = weight * -1 WHERE weight < 0;
 COMMIT;
 SELECT * FROM animals;
+
+/*require queries on update animals table */
+
+/* How many animals are there? */
+
+SELECT COUNT(*) FROM animals;
