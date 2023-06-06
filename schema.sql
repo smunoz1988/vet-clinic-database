@@ -8,3 +8,6 @@ CREATE TABLE animals (
     neutered boolean NOT NULL DEFAULT false,
     weight float NOT NULL DEFAULT 0
 );
+
+/* Add a column species of type string to your animals table. */
+ALTER TABLE animals ADD species varchar(50);
