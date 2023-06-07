@@ -32,3 +32,4 @@ Remove column species, Add column species_id which is a foreign key referencing 
 Add column owner_id which is a foreign key referencing the owners table */
 
 ALTER TABLE animals DROP COLUMN species;
+ALTER TABLE animals ADD species_id int FOREIGN KEY REFERENCES species(id);
