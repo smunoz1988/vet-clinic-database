@@ -19,3 +19,10 @@ CREATE TABLE owners (
     full_name varchar(50) NOT NULL,
     age int NOT NULL
 );
+
+/* Create a table named species with the following columns: id: integer (set it as autoincremented PRIMARY KEY), name: string */
+
+CREATE TABLE species (
+    id SERIAL PRIMARY KEY,
+    name varchar(50) NOT NULL
+);
