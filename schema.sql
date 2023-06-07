@@ -26,3 +26,9 @@ CREATE TABLE species (
     id SERIAL PRIMARY KEY,
     name varchar(50) NOT NULL
 );
+
+/* Modify animals table: Make sure that id is set as autoincremented PRIMARY KEY (already DONE when the table was created), 
+Remove column species, Add column species_id which is a foreign key referencing species table, 
+Add column owner_id which is a foreign key referencing the owners table */
+
+ALTER TABLE animals DROP COLUMN species;
