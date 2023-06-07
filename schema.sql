@@ -11,3 +11,11 @@ CREATE TABLE animals (
 
 /* Add a column species of type string to your animals table. */
 ALTER TABLE animals ADD species varchar(50);
+
+/* Create a table named owners with the following columns: id: integer (set it as autoincremented PRIMARY KEY), full_name: string, age: integer */
+
+CREATE TABLE owners (
+    id SERIAL PRIMARY KEY,
+    full_name varchar(50) NOT NULL,
+    age int NOT NULL
+);
