@@ -51,3 +51,12 @@ CREATE TABLE specializations (
     vet_id int REFERENCES vets(id),
     species_id int REFERENCES species(id)
 );
+
+/* There is a many-to-many relationship between the tables animals and vets: an animal can visit multiple vets and one vet can be visited by multiple animals. Create a "join table" called visits to handle this relationship, it should also keep track of the date of the visit. */
+
+CREATE TABLE visits (
+    id SERIAL PRIMARY KEY,
+    vet_id int REFERENCES vets(id),
+    animal_id int REFERENCES animals(id),
+    date_of_visit date NOT NULL
+);
