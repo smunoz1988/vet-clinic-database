@@ -77,7 +77,7 @@ SELECT species, MIN(weight), MAX(weight) FROM animals GROUP BY species;
 
 SELECT species, AVG(escape_attempts) FROM animals WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-12-31' GROUP BY species;
 
-/* Write queries (using JOIN) to answer the following questions: */
+/* QUERY MULTIPLE TABLES: Write queries (using JOIN) to answer the following questions: */
 
 /* What animals belong to Melody Pond? */
 
@@ -102,3 +102,7 @@ SELECT animals.name FROM animals JOIN owners ON animals.owner_id = owners.id JOI
 /* List all animals owned by Dean Winchester that haven't tried to escape. */
 
 SELECT animals.name FROM animals JOIN owners ON animals.owner_id = owners.id WHERE owners.full_name = 'Dean Winchester' AND animals.escape_attempts = 0;
+
+/* owner name who owns the most animals */
+
+SELECT owners.full_name FROM owners JOIN animals ON owners.id = animals.owner_id GROUP BY owners.full_name ORDER BY COUNT(animals.id) DESC LIMIT 1;
