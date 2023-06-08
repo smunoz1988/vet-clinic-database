@@ -131,7 +131,7 @@ SELECT animals.name, COUNT(visits.animal_id) FROM animals LEFT JOIN visits ON an
 
 /* what animal was Maisy Smith's first visit */
 
-SELECT animals.name FROM animals WHERE id = (SELECT animal_id FROM visits WHERE vet_id = 2 ORDER BY date_of_visit ASC LIMIT 1);
+SELECT a.name, v.date_of_visit FROM animals a JOIN visits v ON v.animal_id = a.id JOIN vets ON v.vet_id = vets.id WHERE vets.name = 'Maisy Smith' ORDER BY v.date_of_visit ASC LIMIT 1;
 
 /* Details for most recent visit: animal information, vet information, and date of visit */
 
