@@ -34,3 +34,12 @@ Add column owner_id which is a foreign key referencing the owners table */
 ALTER TABLE animals DROP COLUMN species;
 ALTER TABLE animals ADD species_id int REFERENCES species(id);
 ALTER TABLE animals ADD owner_id int REFERENCES owners(id);
+
+/* Create a table named vets with the following columns: id: integer (set it as autoincremented PRIMARY KEY), name: string, age: integer, date_of_graduation: date */
+
+CREATE TABLE vets (
+    id SERIAL PRIMARY KEY,
+    name varchar(50) NOT NULL,
+    age int NOT NULL,
+    date_of_graduation date NOT NULL
+);
