@@ -120,3 +120,7 @@ SELECT COUNT(DISTINCT animal_id) FROM visits WHERE vet_id = 3;
 /* List all vets and their specialties, including vets with no specialties */
 
 SELECT vets.name, specializations.species_id FROM vets LEFT JOIN specializations ON vets.id = specializations.vet_id;
+
+/* List all animals that visited Stephanie Mendez between April 1st and August 30th, 2020 */
+
+SELECT animals.name FROM animals JOIN visits ON animals.id = visits.animal_id JOIN vets ON visits.vet_id = vets.id WHERE vets.name = 'Stephanie Mendez' AND visits.date_of_visit BETWEEN '2020-04-01' AND '2020-08-30';
