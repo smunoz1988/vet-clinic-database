@@ -116,3 +116,7 @@ SELECT animals.name FROM animals WHERE id = (SELECT animal_id FROM visits WHERE 
 /* How many different animals did Stephanie Mendez see */
 
 SELECT COUNT(DISTINCT animal_id) FROM visits WHERE vet_id = 3;
+
+/* List all vets and their specialties, including vets with no specialties */
+
+SELECT vets.name, specializations.species_id FROM vets LEFT JOIN specializations ON vets.id = specializations.vet_id;
