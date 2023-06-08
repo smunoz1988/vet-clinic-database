@@ -90,3 +90,8 @@ SELECT animals.name FROM animals JOIN species ON animals.species_id = species.id
 /* List all owners and their animals, remember to include those that don't own any animals. */
 
 SELECT owners.full_name, animals.name FROM owners LEFT JOIN animals ON owners.id = animals.owner_id ORDER BY owners.full_name;
+
+/* How many animals are there per species? */
+
+SELECT species.name, COUNT(animals.id) FROM species LEFT JOIN animals ON species.id = animals.species_id GROUP BY species.name;
+
