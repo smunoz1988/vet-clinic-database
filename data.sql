@@ -50,3 +50,19 @@ SET species_id = CASE
 	WHEN name LIKE '%mon' THEN (SELECT id FROM species WHERE name = 'Digimon')
 	ELSE (SELECT id FROM species WHERE name = 'Pokemon')
 END;
+
+/* Modify your inserted animals to include owner information (owner_id): Sam Smith owns Agumon, Jennifer Orwell owns Gabumon and Pikachu, Bob owns Devimon and Plantmon, Melody Pond owns Charmander, Squirtle, and Blossom, Dean Winchester owns Angemon and Boarmon */
+
+UPDATE animals
+SET owner_id = CASE
+	WHEN name = 'Agumon' THEN (SELECT id FROM owners WHERE full_name = 'Sam Smith')
+	WHEN name = 'Gabumon' THEN (SELECT id FROM owners WHERE full_name = 'Jennifer Orwell')
+	WHEN name = 'Pikachu' THEN (SELECT id FROM owners WHERE full_name = 'Jennifer Orwell')
+	WHEN name = 'Devimon' THEN (SELECT id FROM owners WHERE full_name = 'Bob')
+	WHEN name = 'Plantmon' THEN (SELECT id FROM owners WHERE full_name = 'Bob')
+	WHEN name = 'Charmander' THEN (SELECT id FROM owners WHERE full_name = 'Melody Pond')
+	WHEN name = 'Squirtle' THEN (SELECT id FROM owners WHERE full_name = 'Melody Pond')
+	WHEN name = 'Blossom' THEN (SELECT id FROM owners WHERE full_name = 'Melody Pond')
+	WHEN name = 'Angemon' THEN (SELECT id FROM owners WHERE full_name = 'Dean Winchester')
+	WHEN name = 'Boarmon' THEN (SELECT id FROM owners WHERE full_name = 'Dean Winchester')
+END;
