@@ -86,3 +86,7 @@ SELECT name FROM animals JOIN owners ON animals.owner_id = owners.id WHERE owner
 /* List of all animals that are pokemon (their type is Pokemon) */
 
 SELECT animals.name FROM animals JOIN species ON animals.species_id = species.id WHERE species.name = 'Pokemon';
+
+/* List all owners and their animals, remember to include those that don't own any animals. */
+
+SELECT owners.full_name, animals.name FROM owners LEFT JOIN animals ON owners.id = animals.owner_id ORDER BY owners.full_name;
