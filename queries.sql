@@ -140,3 +140,7 @@ SELECT animals.name, vets.name, visits.date_of_visit FROM animals LEFT JOIN visi
 /* How many visits were with a vet that did not specialize in that animal's species */
 
 SELECT COUNT(*) FROM visits JOIN vets ON visits.vet_id = vets.id JOIN animals ON visits.animal_id = animals.id JOIN specializations ON vets.id = specializations.vet_id WHERE specializations.species_id <> animals.species_id;
+
+/*What specialty should Maisy Smith consider getting? Look for the species she gets the most.*/
+
+SELECT species.name, COUNT(visits.animal_id) FROM species LEFT JOIN animals ON species.id = animals.species_id LEFT JOIN visits ON animals.id = visits.animal_id WHERE animals.owner_id = 2 GROUP BY species.name ORDER BY COUNT(visits.animal_id) DESC LIMIT 1;
