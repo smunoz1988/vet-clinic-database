@@ -36,13 +36,6 @@ This repository includes files with plain SQL that can be used to recreate a dat
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
-  </ul>
-</details>
-
-<details>
 <summary>Database</summary>
   <ul>
     <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
@@ -76,7 +69,6 @@ Install postgreSQL 15
   cd my-folder
   git clone git@github.com:smunoz1988/vet-clinic-database.git
 ```
---->
 
 ### Install
 
