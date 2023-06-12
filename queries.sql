@@ -163,3 +163,11 @@ SELECT * FROM visits where vet_id = 2;
 /* Solution to improve performance */
 
 CREATE INDEX vet_clinic ON visits(vet_id, id, animal_id, date_of_visit);
+
+/* Case 3 */
+
+SELECT * FROM owners where email = 'owner_18327@mail.com';
+
+/* Solution to improve performance */
+
+CREATE INDEX owner_email ON owners(email);
