@@ -130,7 +130,6 @@ Contributions, issues, and feature requests are welcome!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE.MD) licensed.
