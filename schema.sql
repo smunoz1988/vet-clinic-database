@@ -64,3 +64,7 @@ CREATE TABLE visits (
 /* modify NOT NULL ON age column on owners table */
 
 ALTER TABLE owners ALTER COLUMN age DROP NOT NULL;
+
+/* Add an email column to your owners table */
+
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
