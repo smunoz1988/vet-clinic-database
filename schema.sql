@@ -60,3 +60,7 @@ CREATE TABLE visits (
     animal_id int REFERENCES animals(id),
     date_of_visit date NOT NULL
 );
+
+/* modify NOT NULL ON age column on owners table */
+
+ALTER TABLE owners ALTER COLUMN age DROP NOT NULL;

@@ -57,6 +57,7 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - **Query and update animals table.**
 - **query multiple tables.**
 - **add "join table" for visits.**
+- **add "database performance audit.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -119,7 +120,7 @@ Not able at the moment
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **add "database performance audit.**
+- **add "database performance audit ON vets table**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
