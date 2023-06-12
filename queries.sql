@@ -155,3 +155,11 @@ SELECT COUNT(*) FROM visits where animal_id = 4;
 /* Solution to improve performance: add index to animal_id column in visits table */
 
 CREATE INDEX animal_id_index ON visits (animal_id);
+
+/* Case 2 */
+
+SELECT * FROM visits where vet_id = 2;
+
+/* Solution to improve performance */
+
+CREATE INDEX vet_clinic ON visits(vet_id, id, animal_id, date_of_visit);
