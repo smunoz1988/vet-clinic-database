@@ -144,3 +144,30 @@ SELECT COUNT(*) FROM visits v JOIN animals a ON v.animal_id = a.id JOIN vets ve 
 /*What specialty should Maisy Smith consider getting? Look for the species she gets the most.*/
 
 SELECT s.name AS specialty FROM visits v JOIN animals vc ON v.animal_id = vc.id JOIN vets vt ON v.vet_id = vt.id JOIN species s ON vc.species_id = s.id WHERE vt.name = 'Maisy Smith' GROUP BY s.name ORDER BY COUNT(*) DESC LIMIT 1;
+
+
+/* database performance audit */
+
+/* Case 1 */
+
+SELECT COUNT(*) FROM visits where animal_id = 4;
+
+/* Solution to improve performance: add index to animal_id column in visits table */
+
+CREATE INDEX animal_id_index ON visits (animal_id);
+
+/* Case 2 */
+
+SELECT * FROM visits where vet_id = 2;
+
+/* Solution to improve performance */
+
+CREATE INDEX vet_clinic ON visits(vet_id, id, animal_id, date_of_visit);
+
+/* Case 3 */
+
+SELECT * FROM owners where email = 'owner_18327@mail.com';
+
+/* Solution to improve performance */
+
+CREATE INDEX owner_email ON owners(email);
