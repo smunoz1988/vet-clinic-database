@@ -12,6 +12,7 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 - [📗 Table of Contents](#-table-of-contents)
 - [📖 Vet-Clinic-Database ](#-vet-clinic-database-)
+  - [schema](#-schema-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -30,6 +31,10 @@ This repository includes files with plain SQL that can be used to recreate a dat
 # 📖 Vet-Clinic-Database <a name="about-project"></a>
 
 > **Vet-Clinic-Database** is a relational database to create the initial data structure for a vet clinic. I create a table to store animals' information, insert some data into it, and query it.
+
+## Schema <a name="schema"></a>
+
+![Alt text](image.png)
 
 ## 🛠 Built With <a name="built-with"></a>
 
