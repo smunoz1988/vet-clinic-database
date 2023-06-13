@@ -162,7 +162,7 @@ SELECT * FROM visits where vet_id = 2;
 
 /* Solution to improve performance */
 
-CREATE INDEX vet_clinic ON visits(vet_id, id, animal_id, date_of_visit);
+CREATE INDEX vet_clinic ON visits(vet_id, animal_id, date_of_visit);
 
 /* Case 3 */
 
